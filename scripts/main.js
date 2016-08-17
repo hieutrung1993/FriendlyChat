@@ -29,8 +29,7 @@ function FriendlyChat() {
   this.mediaCapture = document.getElementById('mediaCapture');
   this.userPic = document.getElementById('user-pic');
   this.userName = document.getElementById('user-name');
-  this.signInButtonGoogle = document.getElementById('sign-in-Google');
-  this.signInButtonFacebook = document.getElementById('sign-in-Facebook');
+  this.signInButton = document.getElementById('sign-in-menu');
   this.signOutButton = document.getElementById('sign-out');
   this.signInSnackbar = document.getElementById('must-signin-snackbar');
 
@@ -191,9 +190,13 @@ FriendlyChat.prototype.onAuthStateChanged = function(user) {
     this.userPic.removeAttribute('hidden');
     this.signOutButton.removeAttribute('hidden');
 
-    // Hide sign-in button.
+    //Hide sign-in button
+    this.signInButton.setAttribute('hidden', 'true');
+
+    /* Hide sign-in button.
     this.signInButtonGoogle.setAttribute('hidden', 'true');
     this.signInButtonFacebook.setAttribute('hidden', 'true');
+    */
 
     // We load currently existing chant messages.
     this.loadMessages();
@@ -204,8 +207,7 @@ FriendlyChat.prototype.onAuthStateChanged = function(user) {
     this.signOutButton.setAttribute('hidden', 'true');
 
     // Show sign-in button.
-    this.signInButtonGoogle.removeAttribute('hidden');
-    this.signInButtonFacebook.removeAttribute('hidden');
+    this.signInButton.removeAttribute('hidden');
   }
 };
 
