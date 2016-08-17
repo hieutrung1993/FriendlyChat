@@ -61,7 +61,19 @@
       <div id="user-container">
         <div hidden id="user-pic"></div>
         <div hidden id="user-name"></div>
-        <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+
+        <!-- Sign-in Menu -->
+        <button id="sign-in-menu"
+          class="mdl-button mdl-js-button mdl-color-text--white"> Sign-in
+        </button>
+
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+          data-mdl-for="sign-in-menu">
+          <li class="mdl-menu__item">Sign-in with Google</li>
+          <li class="mdl-menu__item">Sign-in with Facebook</li>
+        </ul>
+
+        <!--<button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
           Sign-out
         </button>
         <button hidden id="sign-in-Google" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
@@ -69,6 +81,7 @@
         <button hidden id="sign-in-Facebook" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
           <i class="material-icons">account_circle</i>Sign-in with Facebook
         </button>
+        -->
       </div>
     </div>
   </header>
